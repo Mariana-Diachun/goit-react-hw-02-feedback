@@ -1,4 +1,3 @@
-import 'components/Feedback/Feedback.styled';
 import { Component } from 'react';
 import { Notification } from 'components/Notification/Notification';
 
