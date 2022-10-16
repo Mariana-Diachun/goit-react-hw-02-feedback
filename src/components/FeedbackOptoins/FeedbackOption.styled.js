@@ -13,6 +13,7 @@ export const Item = styled.li`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   display: inline-block;
   gap: 4px;
   min-width: 50px;
