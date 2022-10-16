@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Notification } from 'components/Notification/Notification';
+import { Box, Option } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -9,17 +10,18 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return total === 0 ? (
-    <Notification message="There is no feedback" />
+    <Notification message="No feedback given" />
   ) : (
-    <div>
-      <p>Good:{good}</p>
-      <p>Neutral:{neutral}</p>
-      <p>Bad:{bad}</p>
-      <p>Total:{total}</p>
-      <p>Positive feedback:{positivePercentage}%</p>
-    </div>
+    <Box>
+      <Option>Good: {good}</Option>
+      <Option>Neutral: {neutral}</Option>
+      <Option>Bad: {bad}</Option>
+      <Option>Total: {total}</Option>
+      <Option>Positive feedback: {positivePercentage}%</Option>
+    </Box>
   );
 };
+
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
